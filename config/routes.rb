@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # Logout User
   delete "logout", to: "session#destroy"
 
+  get '*path', to: "application#routing_error"
+
 
 
 

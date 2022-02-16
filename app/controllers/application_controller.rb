@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
       Current.user = User.find_by(id: session[:user_id])
     end
   end
+
+  def routing_error(error="Routing error", status = :not_found, expection=nil)
+    render :routing_error
+  end
 end
