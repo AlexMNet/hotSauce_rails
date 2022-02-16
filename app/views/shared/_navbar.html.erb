@@ -15,15 +15,25 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to 'Sign up', sign_up_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Login', about_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Logout', about_path, class: "nav-link" %>
-        </li>
+        <% if Current.user %>
+          <li class="nav-item">
+            <div class="d-flex align-items-center">
+              <img class="avatar avatar-24 bg-light rounded-circle text-white p-1"
+              src="https://raw.githubusercontent.com/twbs/icons/main/icons/person-fill.svg">
+              <%= link_to Current.user.email, about_path, class: "nav-link" %>
+            </div>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Logout', about_path, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to 'Sign up', sign_up_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Login', about_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
 
     </div>
