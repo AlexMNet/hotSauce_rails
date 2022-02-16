@@ -12,15 +12,19 @@
 
     <div class="mb-3">
       <%= form.label :email, class: "form-label" %>
-      <%= form.text_field :email, class: "form-control"%>
+      <%= form.text_field :email, class: "form-control", placeholder: "example@gmail.com"%>
+    </div>
+    <div class="mb-3">
+      <%= form.label :username, class: "form-label" %>
+      <%= form.text_field :username, class: "form-control", placeholder: "username"%>
     </div>
     <div class="mb-3">
       <%= form.label :password, class: "form-label" %>
-      <%= form.password_field :password, class: "form-control"%>
+      <%= form.password_field :password, class: "form-control", placeholder: "password" %>
     </div>
     <div class="mb-3">
       <%= form.label :password_confirmation, class: "form-label" %>
-      <%= form.password_field :password_confirmation, class: "form-control"%>
+      <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
     </div>
 
     <div class="mb-3">
