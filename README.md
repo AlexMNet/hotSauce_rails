@@ -1,3 +1,3 @@
 # README
 
-Hot Sauce App recreation in Rails for practice.
+Learning rails by recreating my hotsauce app in rails
