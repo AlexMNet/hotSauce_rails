@@ -1,0 +1,18 @@
+<h1>Create A Sauce</h1>
+
+<%= form_with model: @sauce do |form| %>
+
+  <div class="mb-3">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :qty, class: "form-label" %>
+    <%= form.number_field :qty, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "Add Sauce", class: "btn btn-primary" %>
+  </div>
+
+<% end %>
