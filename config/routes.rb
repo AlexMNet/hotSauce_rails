@@ -13,10 +13,10 @@ Rails.application.routes.draw do
   # Logout User
   delete "logout", to: "session#destroy"
 
-  get '*path', to: "application#routing_error"
-
-
-
+  resources :sauces
 
   root to: "main#index"
+
+  # Unhandled Routes
+  get '*path', to: "application#routing_error"
 end
