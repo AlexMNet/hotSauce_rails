@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   get "password_reset", to: "password#edit"
   patch "password_reset", to: "password#update"
 
+  # User update password
+  get "update_password", to: "update_password#edit"
+  patch "update_password", to: "update_password#update"
+
   resources :sauces
 
   root to: "main#index"
