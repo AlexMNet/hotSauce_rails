@@ -5,7 +5,7 @@ class PasswordController < ApplicationController
   def create
     @user = User.find_by(email: params[:email])
     if @user.present?
-      # send email
+      # Send email. Set user variable to @user anc calle dthe forgotPassword method in password_mailer
       PasswordMailer.with(user: @user).forgotPassword.deliver_now
     end
     redirect_to root_path, notice: "If an account with that email was found, we have sent a link to reset your password"
