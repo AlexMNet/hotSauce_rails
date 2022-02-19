@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   # User update password
   get "update_password", to: "update_password#edit"
   patch "update_password", to: "update_password#update"
+  get "user_settings", to: "update_password#index"
 
   resources :sauces
 
