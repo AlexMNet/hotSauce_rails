@@ -10,4 +10,11 @@ class ApplicationController < ActionController::Base
   def routing_error(error="Routing error", status = :not_found, expection=nil)
     render :routing_error
   end
+
+  def verify_logged_in
+    if Current.user.nil?
+      redirect_to sign_in_path, notice: "You must be signed to access this page."
+    end
+  end
+
 end
